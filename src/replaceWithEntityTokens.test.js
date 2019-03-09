@@ -11,3 +11,9 @@ it('can replace a phrase synonym', () => {
   const matches = [{ entity: 'replaced', value: ['a', 'phrase'], position: 2 }]
   expect(replaceWithEntityMatches(tokens, matches)).toEqual('here is replaced')
 })
+
+it('can replace a phrase at the beginning', () => {
+  const tokens = ['a', 'phrase', 'here', 'is']
+  const matches = [{ entity: 'replaced', value: ['a', 'phrase'], position: 0 }]
+  expect(replaceWithEntityMatches(tokens, matches)).toEqual('replaced here is')
+})
