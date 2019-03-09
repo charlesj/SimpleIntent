@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can match a simple entity 1`] = `
+Array [
+  Object {
+    "entity": "simple",
+    "position": 0,
+    "value": "simple",
+  },
+]
+`;
+
+exports[`can match phrases 1`] = `
+Array [
+  Object {
+    "entity": "simple",
+    "position": 2,
+    "value": Array [
+      "multiple",
+      "words",
+    ],
+  },
+]
+`;
+
+exports[`does not match a simple entity against something else 1`] = `Array []`;
